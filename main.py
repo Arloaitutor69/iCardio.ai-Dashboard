@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import metrics, labels, meta, health, review_status, atlas
+from routers import metrics, labels, meta, health, review_status, atlas, dicoms
 import psycopg2.extras
 from dotenv import load_dotenv
 
@@ -22,3 +22,4 @@ app.include_router(labels.router)
 app.include_router(meta.router)
 app.include_router(review_status.router)
 app.include_router(atlas.router)
+app.include_router(dicoms.router)
